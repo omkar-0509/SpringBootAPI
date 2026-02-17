@@ -103,3 +103,20 @@ Purpose: Marks class as JPA entity.
 Used in: Stud class
 Purpose: Marks primary key field.
 ```
+**1️⃣2️⃣ @GeneratedValue**
+```
+Used in: Stud class
+Purpose: Automatically generates primary key value.
+Strategy Used:
+GenerationType.IDENTITY
+```
+**1️⃣3️⃣ @Query**
+```
+Used in: Studrepo
+Purpose: Defines custom SQL query.
+```
+**1️⃣4️⃣ @SpringBootApplication (Entry Annotation)**
+```
+Purpose: Bootstraps and launches application using:
+SpringApplication.run()
+```
