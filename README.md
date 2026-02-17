@@ -57,3 +57,19 @@ Handles HTTP requests
 Automatically converts return values into JSON
 Combines @Controller + @ResponseBody
 ```
+**3️⃣ @Autowired**
+```
+Used in: Studcntrl
+Purpose: Injects dependency automatically.
+```
+**4️⃣ @GetMapping**
+```
+Used for: Fetching student data
+Purpose: Maps HTTP GET requests to methods.
+```
+
+**5️⃣ @PostMapping**
+```
+Used for: Saving student
+Purpose: Maps HTTP POST requests.
+```
