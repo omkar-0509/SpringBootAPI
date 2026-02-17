@@ -73,3 +73,18 @@ Purpose: Maps HTTP GET requests to methods.
 Used for: Saving student
 Purpose: Maps HTTP POST requests.
 ```
+**6️⃣ @PutMapping**
+```
+Used for: Updating student
+Purpose: Maps HTTP PUT requests.
+```
+**7️⃣ @DeleteMapping**
+```
+Used for: Deleting student
+Purpose: Maps HTTP DELETE requests.
+```
+**8️⃣ @PathVariable**
+```
+Used in: Delete method
+Purpose: Binds URL parameter to method parameter.
+```
