@@ -38,3 +38,15 @@ Base URL: `http://localhost:8080/api`
   "name": "John",
   "email": "john@example.com"
 }
+```
+## Springboot used API
+```
+1️⃣ @SpringBootApplication
+
+Used in: SankuApplication
+Purpose: Marks the main class of a Spring Boot application.
+It is a combination of:
+@Configuration
+@EnableAutoConfiguration
+@ComponentScan
+```
