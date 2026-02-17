@@ -49,3 +49,11 @@ It is a combination of:
 @EnableAutoConfiguration
 @ComponentScan
 ```
+**2️⃣ @RestController**
+```
+Used in: Studcntrl
+Purpose: Marks the class as a REST API controller.
+Handles HTTP requests
+Automatically converts return values into JSON
+Combines @Controller + @ResponseBody
+```
