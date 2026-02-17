@@ -88,3 +88,18 @@ Purpose: Maps HTTP DELETE requests.
 Used in: Delete method
 Purpose: Binds URL parameter to method parameter.
 ```
+**9️⃣ @RequestBody**
+```
+Used in: Save and Update methods
+Purpose: Converts JSON request body into Java object.
+```
+**🔟 @Entity**
+```
+Used in: Stud class
+Purpose: Marks class as JPA entity.
+```
+**1️⃣1️⃣ @Id**
+```
+Used in: Stud class
+Purpose: Marks primary key field.
+```
