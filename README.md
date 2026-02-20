@@ -40,83 +40,281 @@ Base URL: `http://localhost:8080/api`
 }
 ```
 ## Springboot used API
-1️⃣ **@SpringBootApplication**
+
+**🟢 1️⃣ CORE SPRING BOOT ANNOTATIONS**
+
+**🔹 @SpringBootApplication**
+
+Most important annotation.
 ```
-Used in: SankuApplication
-Purpose: Marks the main class of a Spring Boot application.
-It is a combination of:
+@SpringBootApplication
+public class DemoApplication { }
+
+Simple meaning:
+
+This tells Spring Boot: "Start the application from here."
+
+Internally it combines:
+
 @Configuration
+
 @EnableAutoConfiguration
+
 @ComponentScan
 ```
-**2️⃣ @RestController**
+**🔹 @Configuration**
 ```
-Used in: Studcntrl
-Purpose: Marks the class as a REST API controller.
-Handles HTTP requests
-Automatically converts return values into JSON
-Combines @Controller + @ResponseBody
-```
-**3️⃣ @Autowired**
-```
-Used in: Studcntrl
-Purpose: Injects dependency automatically.
-```
-**4️⃣ @GetMapping**
-```
-Used for: Fetching student data
-Purpose: Maps HTTP GET requests to methods.
-```
+Marks class as configuration class.
 
-**5️⃣ @PostMapping**
+Used to define beans manually.
 ```
-Used for: Saving student
-Purpose: Maps HTTP POST requests.
+**🔹 @EnableAutoConfiguration**
 ```
-**6️⃣ @PutMapping**
+Automatically configures project based on dependencies.
+
+Example:
+If MySQL dependency present → DB auto config happens.
 ```
-Used for: Updating student
-Purpose: Maps HTTP PUT requests.
+**🔹 @ComponentScan**
 ```
-**7️⃣ @DeleteMapping**
+Scans package for components like @Controller, @Service etc.
 ```
-Used for: Deleting student
-Purpose: Maps HTTP DELETE requests.
+**🟢 2️⃣ STEREOTYPE ANNOTATIONS**
+
+These define role of a class.
+
+**🔹 @Component**
 ```
-**8️⃣ @PathVariable**
+Generic Spring managed class.
+
+Base annotation.
 ```
-Used in: Delete method
-Purpose: Binds URL parameter to method parameter.
+**🔹 @Service**
 ```
-**9️⃣ @RequestBody**
+Business logic class.
+
+Used in service layer.
 ```
-Used in: Save and Update methods
-Purpose: Converts JSON request body into Java object.
-```
-**🔟 @Entity**
-```
-Used in: Stud class
-Purpose: Marks class as JPA entity.
-```
-**1️⃣1️⃣ @Id**
-```
-Used in: Stud class
-Purpose: Marks primary key field.
-```
-**1️⃣2️⃣ @GeneratedValue**
-```
-Used in: Stud class
-Purpose: Automatically generates primary key value.
-Strategy Used:
-GenerationType.IDENTITY
-```
-**1️⃣3️⃣ @Query**
-```
-Used in: Studrepo
-Purpose: Defines custom SQL query.
-```
-**1️⃣4️⃣ @SpringBootApplication (Entry Annotation)**
-```
-Purpose: Bootstraps and launches application using:
-SpringApplication.run()
-```
+🔹 @Repository
+
+DAO layer (database operations).
+
+Adds exception translation.
+
+🔹 @Controller
+
+Used for web MVC controller (returns view).
+
+🔹 @RestController
+
+Used for REST APIs.
+
+It = @Controller + @ResponseBody
+
+🟢 3️⃣ DEPENDENCY INJECTION ANNOTATIONS
+🔹 @Autowired
+
+Automatically inject dependency.
+
+@Autowired
+private UserService service;
+🔹 @Qualifier
+
+Used when multiple beans of same type exist.
+
+🔹 @Primary
+
+Marks default bean when multiple exist.
+
+🔹 @Bean
+
+Used inside @Configuration to create bean manually.
+
+🔹 @Value
+
+Inject value from properties file.
+
+@Value("${server.port}")
+🟢 4️⃣ REST API ANNOTATIONS
+🔹 @RequestMapping
+
+Maps HTTP request.
+
+🔹 @GetMapping
+
+Handles GET request.
+
+🔹 @PostMapping
+
+Handles POST request.
+
+🔹 @PutMapping
+
+Handles PUT request.
+
+🔹 @DeleteMapping
+
+Handles DELETE request.
+
+🔹 @PathVariable
+
+Gets value from URL.
+
+🔹 @RequestParam
+
+Gets query parameter.
+
+🔹 @RequestBody
+
+Gets JSON data from request body.
+
+🔹 @ResponseBody
+
+Returns JSON instead of view.
+
+🟢 5️⃣ JPA / HIBERNATE ANNOTATIONS
+🔹 @Entity
+
+Marks class as database table.
+
+🔹 @Table
+
+Specifies table name.
+
+🔹 @Id
+
+Primary key.
+
+🔹 @GeneratedValue
+
+Auto generate primary key.
+
+Strategies:
+
+AUTO
+
+IDENTITY
+
+SEQUENCE
+
+TABLE
+
+🔹 @Column
+
+Maps field to column.
+
+🔹 @Transient
+
+Field not stored in DB.
+
+🔹 @OneToOne
+
+One-to-one relationship.
+
+🔹 @OneToMany
+
+One-to-many relationship.
+
+🔹 @ManyToOne
+
+Many-to-one relationship.
+
+🔹 @ManyToMany
+
+Many-to-many relationship.
+
+🔹 @JoinColumn
+
+Foreign key column.
+
+🔹 @JoinColumns
+
+Multiple foreign keys.
+
+🟢 6️⃣ VALIDATION ANNOTATIONS
+
+Used for input validation.
+
+🔹 @NotNull
+
+Cannot be null.
+
+🔹 @NotEmpty
+
+Cannot be null or empty.
+
+🔹 @NotBlank
+
+Cannot be null, empty, or spaces.
+
+🔹 @Size
+
+Minimum & maximum length.
+
+🔹 @Email
+
+Valid email format.
+
+🔹 @Min / @Max
+
+Minimum / Maximum value.
+
+🟢 7️⃣ CONFIGURATION ANNOTATIONS
+🔹 @ConfigurationProperties
+
+Bind properties file to class.
+
+🔹 @PropertySource
+
+Load custom properties file.
+
+🔹 @Profile
+
+Activate bean for specific environment (dev/test/prod).
+
+🟢 8️⃣ EXCEPTION HANDLING
+🔹 @ExceptionHandler
+
+Handles specific exception.
+
+🔹 @ControllerAdvice
+
+Global exception handling.
+
+🔹 @RestControllerAdvice
+
+Global REST exception handler.
+
+🟢 9️⃣ SPRING SECURITY ANNOTATIONS
+🔹 @EnableWebSecurity
+
+Enables security.
+
+🔹 @PreAuthorize
+
+Method-level security check.
+
+🔹 @RolesAllowed
+
+Allow only specific roles.
+
+🟢 🔟 ADVANCED ANNOTATIONS
+🔹 @Async
+
+Run method in background thread.
+
+🔹 @Scheduled
+
+Run method at fixed interval.
+
+🔹 @Transactional
+
+Manages database transaction.
+
+🔹 @Cacheable
+
+Enable caching.
+
+🔹 @Lazy
+
+Load bean only when needed.
