@@ -253,62 +253,63 @@ Valid email format.
 ```
 Minimum / Maximum value.
 ```
-🟢 7️⃣ CONFIGURATION ANNOTATIONS
-🔹 @ConfigurationProperties
-
+**🟢 7️⃣ CONFIGURATION ANNOTATIONS**
+**🔹 @ConfigurationProperties**
+```
 Bind properties file to class.
-
-🔹 @PropertySource
-
+```
+**🔹 @PropertySource**
+```
 Load custom properties file.
-
-🔹 @Profile
-
+```
+**🔹 @Profile**
+```
 Activate bean for specific environment (dev/test/prod).
-
-🟢 8️⃣ EXCEPTION HANDLING
-🔹 @ExceptionHandler
-
+```
+**🟢 8️⃣ EXCEPTION HANDLING**
+**🔹 @ExceptionHandler**
+```
 Handles specific exception.
-
-🔹 @ControllerAdvice
-
+```
+**🔹 @ControllerAdvice**
+```
 Global exception handling.
-
-🔹 @RestControllerAdvice
-
+```
+**🔹 @RestControllerAdvice**
+```
 Global REST exception handler.
-
-🟢 9️⃣ SPRING SECURITY ANNOTATIONS
-🔹 @EnableWebSecurity
-
+```
+**🟢 9️⃣ SPRING SECURITY ANNOTATIONS**
+**🔹 @EnableWebSecurity**
+```
 Enables security.
-
-🔹 @PreAuthorize
-
+```
+**🔹 @PreAuthorize**
+```
 Method-level security check.
-
-🔹 @RolesAllowed
-
+```
+**🔹 @RolesAllowed**
+```
 Allow only specific roles.
-
-🟢 🔟 ADVANCED ANNOTATIONS
-🔹 @Async
-
+```
+**🟢 🔟 ADVANCED ANNOTATIONS**
+**🔹 @Async**
+```
 Run method in background thread.
-
-🔹 @Scheduled
-
+```
+**🔹 @Scheduled**
+```
 Run method at fixed interval.
-
-🔹 @Transactional
-
+```
+**🔹 @Transactional**
+```
 Manages database transaction.
-
-🔹 @Cacheable
-
+```
+**🔹 @Cacheable**
+```
 Enable caching.
-
-🔹 @Lazy
-
+```
+**🔹 @Lazy**
+```
 Load bean only when needed.
+```
