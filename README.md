@@ -226,34 +226,33 @@ Foreign key column.
 ```
 Multiple foreign keys.
 ```
-🟢 6️⃣ VALIDATION ANNOTATIONS
-
+**🟢 6️⃣ VALIDATION ANNOTATIONS**
 Used for input validation.
 
-🔹 @NotNull
-
+**🔹 @NotNull**
+```
 Cannot be null.
-
-🔹 @NotEmpty
-
+```
+**🔹 @NotEmpty**
+```
 Cannot be null or empty.
-
-🔹 @NotBlank
-
+```
+**🔹 @NotBlank**
+```
 Cannot be null, empty, or spaces.
-
-🔹 @Size
-
+```
+**🔹 @Size**
+```
 Minimum & maximum length.
-
-🔹 @Email
-
+```
+**🔹 @Email**
+```
 Valid email format.
-
-🔹 @Min / @Max
-
+```
+**🔹 @Min / @Max**
+```
 Minimum / Maximum value.
-
+```
 🟢 7️⃣ CONFIGURATION ANNOTATIONS
 🔹 @ConfigurationProperties
 
