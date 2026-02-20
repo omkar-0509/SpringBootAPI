@@ -169,65 +169,63 @@ Gets JSON data from request body.
 Returns JSON instead of view.
 ```
 
-🟢 5️⃣ JPA / HIBERNATE ANNOTATIONS
-🔹 @Entity
+**🟢 5️⃣ JPA / HIBERNATE ANNOTATIONS**
 
+**🔹 @Entity**
+```
 Marks class as database table.
-
-🔹 @Table
-
+```
+**🔹 @Table**
+```
 Specifies table name.
-
-🔹 @Id
-
+```
+**🔹 @Id**
+```
 Primary key.
-
-🔹 @GeneratedValue
-
+```
+**🔹 @GeneratedValue**
+```
 Auto generate primary key.
 
 Strategies:
 
 AUTO
-
 IDENTITY
-
 SEQUENCE
-
 TABLE
-
-🔹 @Column
-
+```
+**🔹 @Column**
+```
 Maps field to column.
-
-🔹 @Transient
-
+```
+**🔹 @Transient**
+```
 Field not stored in DB.
-
-🔹 @OneToOne
-
+```
+**🔹 @OneToOne**
+```
 One-to-one relationship.
-
-🔹 @OneToMany
-
+```
+**🔹 @OneToMany**
+```
 One-to-many relationship.
-
-🔹 @ManyToOne
-
+```
+**🔹 @ManyToOne**
+```
 Many-to-one relationship.
-
-🔹 @ManyToMany
-
+```
+**🔹 @ManyToMany**
+```
 Many-to-many relationship.
-
-🔹 @JoinColumn
-
+```
+**🔹 @JoinColumn**
+```
 Foreign key column.
-
-🔹 @JoinColumns
-
+```
+**🔹 @JoinColumns**
+```
 Multiple foreign keys.
-
+```
 🟢 6️⃣ VALIDATION ANNOTATIONS
 
 Used for input validation.
