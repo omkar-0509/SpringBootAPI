@@ -55,23 +55,18 @@ Simple meaning:
 This tells Spring Boot: "Start the application from here."
 
 Internally it combines:
-
 @Configuration
-
 @EnableAutoConfiguration
-
 @ComponentScan
 ```
 **🔹 @Configuration**
 ```
 Marks class as configuration class.
-
 Used to define beans manually.
 ```
 **🔹 @EnableAutoConfiguration**
 ```
 Automatically configures project based on dependencies.
-
 Example:
 If MySQL dependency present → DB auto config happens.
 ```
@@ -86,13 +81,11 @@ These define role of a class.
 **🔹 @Component**
 ```
 Generic Spring managed class.
-
 Base annotation.
 ```
 **🔹 @Service**
 ```
 Business logic class.
-
 Used in service layer.
 ```
 🔹 @Repository
