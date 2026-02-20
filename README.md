@@ -88,82 +88,86 @@ Base annotation.
 Business logic class.
 Used in service layer.
 ```
-🔹 @Repository
-
+**🔹 @Repository**
+```
 DAO layer (database operations).
-
 Adds exception translation.
-
-🔹 @Controller
-
+```
+**🔹 @Controller**
+```
 Used for web MVC controller (returns view).
-
-🔹 @RestController
-
+```
+**🔹 @RestController**
+```
 Used for REST APIs.
-
 It = @Controller + @ResponseBody
+```
 
-🟢 3️⃣ DEPENDENCY INJECTION ANNOTATIONS
-🔹 @Autowired
+**🟢 3️⃣ DEPENDENCY INJECTION ANNOTATIONS**
 
+**🔹 @Autowired**
+```
 Automatically inject dependency.
+```
 
-@Autowired 
+**@Autowired 
 private UserService service;
-🔹 @Qualifier
-
+🔹 @Qualifier**
+```
 Used when multiple beans of same type exist.
-
-🔹 @Primary
-
+```
+**🔹 @Primary**
+```
 Marks default bean when multiple exist.
-
-🔹 @Bean
-
+```
+**🔹 @Bean**
+```
 Used inside @Configuration to create bean manually.
-
-🔹 @Value
-
+```
+**🔹 @Value**
+```
 Inject value from properties file.
-
 @Value("${server.port}")
-🟢 4️⃣ REST API ANNOTATIONS
-🔹 @RequestMapping
+```
 
+**🟢 4️⃣ REST API ANNOTATIONS**
+
+**🔹 @RequestMapping**
+```
 Maps HTTP request.
-
-🔹 @GetMapping
-
+```
+**🔹 @GetMapping**
+```
 Handles GET request.
-
-🔹 @PostMapping
-
+```
+**🔹 @PostMapping**
+```
 Handles POST request.
-
-🔹 @PutMapping
-
+```
+**🔹 @PutMapping**
+```
 Handles PUT request.
-
-🔹 @DeleteMapping
-
+```
+**🔹 @DeleteMapping**
+```
 Handles DELETE request.
-
-🔹 @PathVariable
-
+```
+**🔹 @PathVariable**
+```
 Gets value from URL.
-
-🔹 @RequestParam
-
+```
+**🔹 @RequestParam**
+```
 Gets query parameter.
-
-🔹 @RequestBody
-
+```
+**🔹 @RequestBody**
+```
 Gets JSON data from request body.
-
-🔹 @ResponseBody
-
+```
+**🔹 @ResponseBody**
+```
 Returns JSON instead of view.
+```
 
 🟢 5️⃣ JPA / HIBERNATE ANNOTATIONS
 🔹 @Entity
