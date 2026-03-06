@@ -11,7 +11,7 @@ This is a simple **Spring Boot REST API** built in Java. It shows how to create,
 - Java
 - Spring Boot
 - Spring Data JPA
-- H2 / MySQL Database
+- H2 / MySQL Database 
 - Maven
 
 ## API Endpoints
