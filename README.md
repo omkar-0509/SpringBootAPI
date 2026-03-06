@@ -15,7 +15,7 @@ This is a simple **Spring Boot REST API** built in Java. It shows how to create,
 - Maven
 
 ## API Endpoints
-
+ 
 Base URL: `http://localhost:8080/api`
 
 | Method | Endpoint       | Description           |
