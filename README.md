@@ -313,3 +313,116 @@ Enable caching.
 ```
 Load bean only when needed.
 ```
+Complete Spring Boot Backend Annotations Table
+
+##Package	Annotation	Purpose
+```
+Main	@SpringBootApplication	Main Spring Boot annotation that enables auto configuration and component scanning
+Main	@Configuration	Marks class as configuration class
+Main	@EnableAutoConfiguration	Automatically configures Spring Boot dependencies
+Main	@ComponentScan	Scans packages for Spring components
+```
+
+Entity Layer
+Annotation	Purpose
+@Entity	Marks class as database table
+@Table	Specifies table name
+@Id	Primary key of table
+@GeneratedValue	Auto generates ID value
+@Column	Defines column properties
+@OneToOne	One-to-one relationship between tables
+@OneToMany	One-to-many relationship
+@ManyToOne	Many-to-one relationship
+@ManyToMany	Many-to-many relationship
+@JoinColumn	Defines foreign key column
+@Enumerated	Maps enum to database column
+@Transient	Field not stored in database
+@CreationTimestamp	Automatically sets creation time
+@UpdateTimestamp	Automatically sets update time
+Repository Layer
+Annotation	Purpose
+@Repository	Marks interface as repository component
+@Query	Defines custom JPQL query
+@Param	Pass parameters in query
+@Modifying	Used for update/delete queries
+@Transactional	Manages database transaction
+DTO Layer
+Annotation	Purpose
+@NotNull	Field cannot be null
+@NotBlank	Field cannot be empty
+@Size	Validates field length
+@Email	Validates email format
+@Pattern	Regex validation
+@Valid	Triggers validation
+@JsonIgnore	Excludes field from JSON response
+@JsonProperty	Custom JSON field name
+@Data	Lombok annotation to generate getters/setters
+@Getter	Generates getter methods
+@Setter	Generates setter methods
+@Builder	Implements builder pattern
+Mapper Layer (MapStruct)
+Annotation	Purpose
+@Mapper	Marks interface as MapStruct mapper
+@Mapping	Maps fields between DTO and Entity
+@Mappings	Multiple field mappings
+@MappingTarget	Updates existing object
+@BeforeMapping	Logic before mapping
+@AfterMapping	Logic after mapping
+Service Layer
+Annotation	Purpose
+@Service	Marks service class
+@Autowired	Injects dependencies
+@Transactional	Handles transaction management
+@Lazy	Loads bean only when needed
+@Qualifier	Specifies which bean to inject
+@Async	Executes method asynchronously
+@Cacheable	Stores method result in cache
+@CachePut	Updates cache
+@CacheEvict	Removes data from cache
+ServiceImpl Layer
+Annotation	Purpose
+@Service	Marks service implementation
+@Autowired	Inject repository or dependencies
+@Transactional	Ensures database operations are transactional
+@Override	Overrides interface method
+@Lazy	Lazy loading of beans
+Controller Layer
+Annotation	Purpose
+@RestController	Defines REST API controller
+@Controller	Used for MVC controllers
+@RequestMapping	Base URL mapping
+@GetMapping	Handles GET requests
+@PostMapping	Handles POST requests
+@PutMapping	Handles update requests
+@DeleteMapping	Handles delete requests
+@RequestBody	Reads JSON request body
+@PathVariable	Gets value from URL path
+@RequestParam	Gets query parameter
+@CrossOrigin	Allows frontend access (CORS)
+@Valid	Validates request body
+Exception Handling Layer
+Annotation	Purpose
+@ControllerAdvice	Global exception handler
+@RestControllerAdvice	Global exception handler for REST APIs
+@ExceptionHandler	Handles specific exception
+@ResponseStatus	Sets HTTP status code
+@ResponseBody	Converts response to JSON
+Security Layer
+Annotation	Purpose
+@EnableWebSecurity	Enables Spring Security
+@EnableMethodSecurity	Enables method-level security
+@PreAuthorize	Role-based access control
+@Secured	Restricts method access
+@AuthenticationPrincipal	Gets authenticated user
+@PostAuthorize	Authorization after method execution
+Config Layer
+Annotation	Purpose
+@Configuration	Defines configuration class
+@Bean	Creates Spring managed bean
+@ComponentScan	Scans packages for components
+@EnableScheduling	Enables scheduled tasks
+@EnableCaching	Enables caching
+@EnableAsync	Enables asynchronous methods
+@PropertySource	Loads properties file
+@Value	Injects property values
+@ConfigurationProperties	Maps properties to Java object
